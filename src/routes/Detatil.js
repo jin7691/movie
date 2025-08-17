@@ -13,6 +13,7 @@ function Detatil() {
         console.log(json);
     }
     //c/onsole.log(id);
+
     useEffect(() => {
         getMovie();
     }, []);

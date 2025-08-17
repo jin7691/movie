@@ -28,6 +28,7 @@ function Home() {
         */
 
     }, [])
+
     console.log("movies ==>", movies);
     return <div>
         {loading ? <h1>Loading.....</h1> :
