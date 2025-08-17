@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+
+//import Button from "./Button";
+//import styles from "./App.module.css";
+
+//import { useEffect, useState } from "react";
+//import Movie from "./components/Movie";
+
+//import { useState, useEffect} from "react";
+
+import {
+  BrowserRouter as Router,
+  //Switch,  Switch -->  Routes 대체
+  Route,
+  Routes,
+} from "react-router-dom";
+import Home from "./routes/Home";
+import Detatil from "./routes/Detatil";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  return <Router>
+    <Routes>
+      <Route path="/hellow" element={<h1>hellow</h1>}></Route>
+      <Route path="/movie/:id" element={<Detatil></Detatil>}></Route>
+      <Route path="/" element={<Home />}>
+
+      </Route>
+    </Routes>
+  </Router>;
+
 }
 
 export default App;
